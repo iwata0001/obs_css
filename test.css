@@ -9,7 +9,6 @@
 /*komento*/
 body, .chat-room, .chat-line__moderation, .chat-line__status, .chat-line__message, .chat-author__display-name {
 	margin: 0 auto!important;
-	overflow: hidden!important;
 	font-weight: bold!important;
 	font-size: 16px!important;
 	background-color: rgba(0,0,0,0)!important;
@@ -25,14 +24,7 @@ body, .chat-room, .chat-line__moderation, .chat-line__status, .chat-line__messag
   border-radius: 20px;
   background-color: #ffffff;
 
-  -moz-animation: cssAnimation 0s ease-in 5s forwards;
-  /* Firefox */
-  -webkit-animation: cssAnimation 0s ease-in 5s forwards;
-  /* Safari and Chrome */
-  -o-animation: cssAnimation 0s ease-in 5s forwards;
-  /* Opera */
-  animation: cssAnimation 0s ease-in 5s forwards;
-  -webkit-animation-fill-mode: forwards;
+  animation: cssAnimation 0s ease-in 10s forwards;
   animation-fill-mode: forwards;
 }
 
@@ -42,37 +34,19 @@ body, .chat-room, .chat-line__moderation, .chat-line__status, .chat-line__messag
   display: block;
   width: 0;
   height: 0;
-  left: -10px;
-  top: 10px;
+  left: 8px;
+  top: 30px;
   margin-left: 8px;
-  border-right: 20px solid #0000ff;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-
-  -moz-animation: cssAnimation 0s ease-in 5s forwards;
-  /* Firefox */
-  -webkit-animation: cssAnimation 0s ease-in 5s forwards;
-  /* Safari and Chrome */
-  -o-animation: cssAnimation 0s ease-in 5s forwards;
-  /* Opera */
-  animation: cssAnimation 0s ease-in 5s forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 20px solid #ffffff;
 }
 @keyframes cssAnimation {
   to {
-      width:0;
-      height:0;
-      overflow:hidden;
+      opacity:0;
   }
 }
-@-webkit-keyframes cssAnimation {
-  to {
-      width:0;
-      height:0;
-      visibility:hidden;
-  }
-}
+
 .chat-line__username-container span:first-child {
 	display: none !important;
 }
