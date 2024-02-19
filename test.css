@@ -24,6 +24,16 @@ body, .chat-room, .chat-line__moderation, .chat-line__status, .chat-line__messag
   padding: 10px 15px;
   border-radius: 20px;
   background-color: #ffffff;
+
+  -moz-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Firefox */
+  -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Opera */
+  animation: cssAnimation 0s ease-in 5s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .chat-line__no-background::after{
@@ -38,6 +48,30 @@ body, .chat-room, .chat-line__moderation, .chat-line__status, .chat-line__messag
   border-right: 20px solid #0000ff;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
+
+  -moz-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Firefox */
+  -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Opera */
+  animation: cssAnimation 0s ease-in 5s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+  to {
+      width:0;
+      height:0;
+      overflow:hidden;
+  }
+}
+@-webkit-keyframes cssAnimation {
+  to {
+      width:0;
+      height:0;
+      visibility:hidden;
+  }
 }
 .chat-line__username-container span:first-child {
 	display: none !important;
